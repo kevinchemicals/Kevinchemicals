@@ -13,6 +13,9 @@
         .products { display: flex; flex-wrap: wrap; justify-content: center; }
         .product { background: #f4f4f4; padding: 20px; margin: 10px; width: 300px; }
         footer { background: #00264d; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+        form { max-width: 500px; margin: 0 auto; background: #f4f4f4; padding: 20px; border-radius: 5px; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #004080; color: white; padding: 10px 20px; border: none; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -36,12 +39,16 @@
             <div class="product"><h3>Solvents</h3><p>Pure and industrial-grade solvents for various industries.</p></div>
             <div class="product"><h3>Polymers & Resins</h3><p>Top-grade polymers and resins for manufacturing.</p></div>
         </div>
+        <p><a href="products.pdf" download>Download Full Product List</a></p>
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: sales@kevinchemicals.ca</p>
-        <p>Phone: +1 (647)-860-1596</p>
-        <p>Website: kevinchemicals.ca</p>
+        <form action="mailto:sales@kevinchemicals.ca" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     <footer>
         <p>&copy; 2025 Kevin Chemicals. All Rights Reserved.</p>
